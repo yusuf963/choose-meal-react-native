@@ -3,6 +3,10 @@
   "extends": "@react-native-community",
   "root":true,
   "rules":{
-    "quotes": [2, "double", { "avoidEscape": true }]
+    "quotes": [2, "double", { "avoidEscape": true }],
+    "react/no-unstable-nested-components":[  // since we are using React Native, we can use unstable components
+        "off" , "warn" , "error", { "allowAsProps": true | false }
+    ]
+
   }
 }
