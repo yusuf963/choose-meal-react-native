@@ -1,7 +1,5 @@
 import React from "react";
-// import { Text, Image } from "react-native";
 import { SvgXml } from "react-native-svg";
-import { Image } from "react-native";
 import star from "../../assets/star.js";
 import open from "../../assets/open.js";
 import { Spacer } from "./spacer/Spacer";
@@ -9,11 +7,11 @@ import {
   RestaurantCard,
   RestaurantCardCover,
   Info,
-  Title,
   Rating,
   Section,
   SectionEnd,
   Address,
+  Icon,
 } from "./RestaurantInfoComponent-style";
 import { Text } from "./typography/TextComponent.js";
 
@@ -51,7 +49,7 @@ export const RestaurantsInfo = ({ restaurant = {} }) => {
               {isOpenNow && <SvgXml xml={open} width={20} height={20} />}
             </Spacer>
             <Spacer position="left" size="large">
-              <Image style={{ width: 15, height: 15 }} source={{ uri: icon }} />
+              <Icon source={{ uri: icon }} />
             </Spacer>
           </SectionEnd>
         </Section>
