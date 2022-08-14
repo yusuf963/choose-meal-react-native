@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Image } from "react-native";
+import { Text, Image } from "react-native";
 import styled from "styled-components/native";
 import { Card } from "react-native-paper";
 import { SvgXml } from "react-native-svg";
@@ -59,7 +59,6 @@ export const RestaurantsInfo = ({ restaurant = {} }) => {
   } = restaurant;
 
   const rateStars = new Array(Math.ceil(rating)).fill(0);
-  console.log(rateStars.length);
 
   return (
     <RestaurantCard elevation={5}>
