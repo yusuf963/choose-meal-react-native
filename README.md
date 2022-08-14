@@ -2,6 +2,7 @@ https://github.com/mobinni/MealsToGo
 ## Yoga
 Yoga is the official react-native layout engine for rendering views.
 ## eslint + prettier
+https://github.com/facebook/react-native/tree/main/packages/eslint-config-react-native-community
 1. install prettier and eslint from community
 `yarn add --dev eslint prettier @react-native-community/eslint-config  #eslint+prettier`
 
@@ -35,4 +36,15 @@ or
 }
 ```
 4. run script `yarn lint && yarn prettier` to lint and format code you can add `--fix` to fix the code
+
+## Styling
+styled components
+https://styled-components.com/docs/basics#react-native
+`yarn add styled-components`
+## Assets and fonts
+### fonts
+https://github.com/expo/google-fonts
+ ### SVG
+https://github.com/react-native-svg/react-native-svg 
+
 
