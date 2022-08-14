@@ -1,28 +1,34 @@
 import * as React from "react";
-import { StatusBar } from "expo-status-bar";
-import { RestaurantScreen } from "./src/screens/RestaurantsScreen";
+import { StatusBar as ExpoStatusBar } from "expo-status-bar";
 import { ThemeProvider } from "styled-components/native";
+import { RestaurantScreen } from "./src/screens/RestaurantsScreen";
 import { theme } from "./src/theme";
-import { useFonts, Oswald_400Regular } from "@expo-google-fonts/oswald";
+
+import { useFonts as useLato, Lato_400Regular } from "@expo-google-fonts/lato";
 import {
-  useFonts as _useFonts,
-  Lato_400Regular,
-} from "@expo-google-fonts/lato";
+  useFonts as useOswald,
+  Oswald_400Regular,
+} from "@expo-google-fonts/oswald";
 
 const App = () => {
-  const [oswaldFontsLoaded] = useFonts({
+  const [oswaldLoaded] = useOswald({
     Oswald_400Regular,
   });
-  const [latoFontsLoaded] = useFonts({
+
+  const [latoLoaded] = useLato({
     Lato_400Regular,
   });
+
+  if (!oswaldLoaded || !latoLoaded) {
+    return null;
+  }
 
   return (
     <>
       <ThemeProvider theme={theme}>
         <RestaurantScreen />
-        <StatusBar style="auto" />
       </ThemeProvider>
+      <ExpoStatusBar style="auto" />
     </>
   );
 };
